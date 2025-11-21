@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Attendance</title>
+  <link rel="stylesheet" href="attendance.css" />
+  <script src="enseignantSeances.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ENICARTHAGE</span>
+      </div>
+      <nav class="nav">
+        <a href="acceuilEnseignant.html" class="active"><i class="fas fa-clipboard-check"></i> Accueil</a>
+        
+        <a href="plannificationRattrapage.html"><i class="fas fa-clock"></i>Rattrapage</a>
+        <a href="messagesEnseignant.html"><i class="fas fa-envelope"></i> Notifications</a>
+        <a href="../login/index.html"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+      </nav>
+      <div class="calendar-box">
+        <div class="calendar-header">
+            <button id="prev-month" class="month-nav"><i class="fas fa-chevron-left"></i></button>
+            <h2 class="calendar-title" id="current-month-year">📅 Avril 2025</span>
+            </h2>
+            <button id="next-month" class="month-nav"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div id="calendar" class="calendar-grid"></div>        
+        <div class="clock" aria-live="polite"><span id="time"></span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <div class="user-info">
+          <span>👤 enseignant</span>
+        </div>
+      </header>
+    
+      <section class="content">
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="🔍 Rechercher un cours..." />
+        </div>
+    
+        <!-- Ajout des cartes statistiques -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">32</div>
+              <div class="cardName">Étudiants inscrits</div>
+            </div>
+            <div class="iconBx">
+              <i class="fas fa-users"></i>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div>
+              <div class="numbers">5</div>
+              <div class="cardName">Cours enseignés</div>
+            </div>
+            <div class="iconBx">
+              <i class="fas fa-book"></i>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div>
+              <div class="numbers">18</div>
+              <div class="cardName">total d'abscences cette semaine</div>
+            </div>
+            <div class="iconBx">
+              <i class="fas fa-file-alt"></i>
+            </div>
+          </div>
+        
+          <div class="card">
+            <div>
+              <div class="numbers">3</div>
+              <div class="cardName">Réunions cette semaine</div>
+            </div>
+            <div class="iconBx">
+              <i class="fas fa-calendar"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Section des cours -->
+        <!-- Section des cours -->
+<div class="details">
+  <div class="recentOrders" id="coursesSection">
+    <div class="cardHeader">
+      <h2>Mes séances</h2>
+      <button id="refreshSeances" class="btn-refresh">
+        <i class="fas fa-sync-alt"></i> Actualiser
+      </button>
+    </div>
+
+    <div id="seances-container" class="course-grid">
+      <!-- Les séances seront chargées dynamiquement ici -->
+      <div class="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i> Chargement des séances...
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
+    </main>
+
+  <script src="attendanceTeacher.js"></script>
+</body>
+</html>

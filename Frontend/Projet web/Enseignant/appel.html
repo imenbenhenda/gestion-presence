@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appel des étudiants</title>
+  <link rel="stylesheet" href="attendance.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Le reste de votre sidebar reste inchangé -->
+    
+    <main class="main">
+      <header class="header">
+        <div class="user-info">
+          <span id="enseignant-nom">👤 Chargement...</span>
+          <span id="seance-info"></span>
+        </div>
+      </header>
+    
+      <section class="content">
+        <div class="search-bar">
+          <input type="text" id="search" placeholder="🔍 Rechercher un étudiant..." />
+        </div>
+    
+        <div class="seance-header">
+          <h2 id="cours-titre">Chargement...</h2>
+          <div class="seance-meta">
+            <span id="seance-date"></span>
+            <span id="seance-salle"></span>
+            <span id="seance-classe"></span>
+          </div>
+        </div>
+        
+        <div class="attendance-controls">
+          <button id="btn-tous-present" class="btn-small">Tous présents</button>
+          <button id="btn-tous-absent" class="btn-small">Tous absents</button>
+        </div>
+        
+        <table class="attendance-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Prénom</th>
+              <th>Présence</th>
+              <th>Commentaire</th>
+            </tr>
+          </thead>
+          <tbody id="etudiants-list">
+            <!-- Rempli dynamiquement par JavaScript -->
+          </tbody>
+        </table>
+
+        <div class="attendance-actions">
+          <button id="btn-enregistrer" class="btn-primary">Enregistrer l'appel</button>
+          <button id="btn-annuler" class="btn-secondary">Annuler</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="appel.js"></script> <!-- Nouveau fichier JS spécifique -->
+</body>
+</html>

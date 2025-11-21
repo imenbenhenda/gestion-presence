@@ -1,0 +1,128 @@
+.container_contact{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 28rem;
+    margin: 5rem auto;
+    border-radius: 1rem;
+}
+.aside_contact{
+background: var(--color-primery);
+padding: 2rem;
+border-radius: 1rem;
+position: relative;
+bottom: 8rem;
+}
+.img_aside {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img_aside img {
+    border-radius: 8px;
+    width: 200px; /* Réduit la taille de l'image */
+    height: auto; /* Conserve les proportions */
+}
+
+.aside_contact h2{
+    text-align: left;
+    margin-bottom: 1rem;
+    }
+.aside_contact p{
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        }
+
+.detail_contact li{
+display: flex;
+gap: 1rem;
+align-items: center ;
+margin-bottom: 1rem;
+}
+.sos{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    }
+.sos a{
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 25rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+.sos a:hover{
+    background: transparent;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+.formname{
+    display: flex;
+    gap: 1.2rem;
+}
+input[type="text"]{
+    width: 50%;
+}
+input, textarea{
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+form .btn-primery{
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+.contact{
+    padding-bottom: 0;
+}
+.container_contact{
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+
+}
+.aside_contact{
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+    }
+    form{
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+    }
+
+    @media screen and (max-width:600px) {
+        .container_contact{
+            
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            
+            margin-top: 0.5rem;
+            padding: 0;
+        }
+        form{
+            margin:0 1.5rem 3rem ;
+        }
+        .formname{
+           flex-direction: column;
+
+        }
+        input[type="text"]{
+            width: 100%;
+        }
+    }

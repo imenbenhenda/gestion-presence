@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Site exemple pour une ecole</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="container nav_container">
+            <div class="logo-container">
+                <img src="images/Logo_ENICarthage.jpg" alt="Logo ENICARTHAGE" class="nav-logo">
+                <a href="index.html"><h4>ENICARTHAGE</h4></a>
+            </div>
+            <ul class="nav_menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">A propos</a></li>
+                <li class="dropdown">
+                    <a href="#">Login <i class="uil uil-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login_admin.html">Administrateur</a></li>
+                        <li><a href="login_enseignant.html">Enseignant</a></li>
+                        <li><a href="login_etudiant.html">Étudiant</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+            <button id="openbtnmenu"><i class="uil uil-bars"></i></button>
+            <button id="closebtnmenu"><i class="uil uil-times"></i></button>
+        </div>
+    </nav>
+    <!-- entete -->
+    <header>
+         <div class="container header_container">
+            <div class="header_left">
+                <h1>"Libérez tout votre potentiel avec notre école !"</h1>
+                <p>Notre objectif est de garantir une gestion fluide et transparente des activités académiques et administratives, tout en accompagnant les étudiants tout au long de leur parcours.</p>
+            </div>
+            <div class="header_rigth">
+                <div class="header_img">
+                    <img src="images/School_Banner.png" alt="">
+                </div>
+            </div>
+         </div>
+    </header>
+    <!-- fin entete -->
+    <section class="categs">
+        <div class="container categ_container">
+            <div class="categ_left">
+                <h1>Categories</h1>
+                <p>Explorez cette section pour découvrir les multiples opportunités d'apprentissage offertes par notre école, favorisant ainsi le développement intellectuel et la réussite de nos étudiants.</p>
+            </div>
+            <div class="categ_rigth">
+                <article class="categ">
+                    <span class="categ_icon"><img  src="images/iconcours/livre-de-maths.png" alt=""></span>
+                    <h5>Math pour Ingénieurs</h5>
+                    <p>Cours visant à renforcer les compétences mathématiques des élèves.</p>
+                </article>
+                <article class="categ">
+                    <span class="categ_icon"><img  src="images/iconcours/cellules.png" alt=""></span>
+                    <h5>Spring boot</h5>
+                    <p>Cours destiné à initier les étudiants au développement d'applications web robustes et modernes.</p>
+                </article>
+                <article class="categ">
+                    <span class="categ_icon"><img src="images/iconcours/mallette.png" alt=""></span>
+                    <h5>Comptabilité</h5>
+                    
+<p>Cours visant à initier les étudiants aux principes fondamentaux de la gestion financière et à leur permettre de maîtriser les outils essentiels de la comptabilité d'entreprise.</p>
+                </article>
+                <article class="categ">
+                    <span class="categ_icon"><img  src="images/iconcours/souris.png" alt=""></span>
+                    <h5>Java</h5>
+                    <p>Cours visant à renforcer les compétences informatique des élèves.</p>
+                </article>
+                <article class="categ">
+                    <span class="categ_icon"><img  src="images/iconcours/stylo.png" alt=""></span>
+                    <h5>Analyse de données</h5> 
+                    <p>Cours visant à doter les étudiants des compétences nécessaires pour collecter, traiter et interpréter des données afin de prendre des décisions éclairées basées sur des analyses statistiques et informatiques.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- fin categ -->
+    <section class="courspopulaires">
+        <h2>Nos cours Populaires</h2>
+        <div class="container cours_container">
+            <article class="cour">
+                <div class="cour_img"><img src="images/New.png" alt=""></div>
+                <div class="infocour">
+                    <h4>Cours de language informatique Java</h4>
+                    <p>Le cours de programmation en langage Java est conçu pour permettre aux étudiants d’acquérir une maîtrise approfondie de la programmation orientée objet, essentielle pour le développement d’applications robustes et performantes.</p>
+                    
+                </div>
+            </article>
+            <article class="cour">
+                <div class="cour_img"><img src="images/Maths.png" alt=""></div>
+                <div class="infocour">
+                    <h4>Cours de math pour Ingénieurs</h4>
+                    <p>Le cours de mathématiques pour ingénieurs est conçu pour renforcer les compétences analytiques des étudiants et leur fournir les outils nécessaires pour résoudre des problèmes complexes dans divers domaines de l’ingénierie.</p>
+                </div>
+            </article>
+            <article class="cour">
+                <div class="cour_img"><img src="images/Hero_MicrosoftExcel_960x675_2x_RE4r1u3.avif" alt=""></div>
+                <div class="infocour">
+                    <h4>Maîtrisez les fondamentaux d'administration systèmes</h4>
+                    <p>  
+                        Cette matière vous initie à la gestion des systèmes d'exploitation (Linux/Windows), à la configuration des serveurs, à la virtualisation, ainsi qu'à la sécurisation des infrastructures informatiques. Vous acquerrez des compétences essentielles pour administrer, maintenir et optimiser des environnements systèmes en entreprise.  
+                    </p> 
+                </div>
+            </article>
+            
+        </div>
+    
+    </section>
+    
+    <!-- ----------------------- -->
+   
+    <footer class="footer">
+        <div class="container footercontainer">
+            <div class="foot1">
+                <h4>formations</h4>
+                <div>
+                    <p>Départements</p> 
+                    <p>Génie Informatique</p>
+                    <P>Génie électrique</P>
+                    <p>Génie industriel</p>
+            
+                   
+                </div>
+            </div>
+            <div class="foot2">
+                <h4>permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Apropos.html">A propos</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+            </div>
+            <div class="foot3">
+                <h4>formations</h4>
+                <div>
+                    <p>Cycles ingénieurs</p> 
+                    <p>GSIL</p>
+                    <P>Mécatronique</P>
+                    <p>Informatique </p>
+                    <p>Infotronique</p>
+                    <p>Mastéres </p>
+                    <p>ARTI</p>
+                    <p>TIC </p>
+                    <p>MPSDM</p>
+                   <p>Doctorat</p>
+                </div>
+            </div>
+
+
+            <div class="foot4">
+                <h4>Contactez nous</h4>
+                <div>
+                    <p>(+216)71 940 699/(+216)71 940 775</p> 
+                    <p>(+216)71 941 579</p>
+                    <P>enicarthage@enicarthage.rnu.tn</P>
+                </div>
+            </div>
+        </div>
+            <div class="footercopyrigth">
+                <small>Copyright ENICARTHAGE© All Rights Reserved</small>
+            </div>
+        
+    </footer>
+    
+    <script src="js/main.js" ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+            },
+            });
+    </script>
+</body>
+</html>

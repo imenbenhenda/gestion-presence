@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Make-up Session Requests</title>
+  <link rel="stylesheet" href="makeup.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <span>ENICARTHAGE</span>
+      </div>
+      <nav class="nav">
+        <a href="attendanceTeacher.html"><i class="fas fa-clipboard-check"></i> Appel</a>
+        <a href="makeupSession.html" class="active"><i class="fas fa-clock"></i> Rattrapage</a>
+      
+        <a href="../login/index.html"><i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+      </nav>
+      <div class="calendar-box">
+        <div class="calendar-header">
+            <button id="prev-month" class="month-nav"><i class="fas fa-chevron-left"></i></button>
+            <h2 class="calendar-title" id="current-month-year">📅 Avril 2025</span>
+            </h2>
+            <button id="next-month" class="month-nav"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div id="calendar" class="calendar-grid"></div>
+        <div id="calendar-messages" class="calendar-messages"></div>
+        <div class="add-event">
+            <h4>➕ Ajouter un événement</h4>
+            <form id="event-form">
+              <input type="date" id="event-date" required />
+              <input type="text" id="event-text" placeholder="Contenu du message" required />
+              <button type="submit">Ajouter</button>
+            </form>
+          </div>          
+        <div class="clock" aria-live="polite"><span id="time"></span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <h1>Demandes de Séances de Rattrapage</h1>
+        <div class="user-info">
+          <span>👤 admin</span>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="card">
+          <table id="session-table">
+            <thead>
+              <tr>
+                <th>Nom Enseignant</th>
+                <th>Matière</th>
+                <th>Date Prévue</th>
+                <th>Groupe</th>
+                <th>Salle</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="makeupSession.js"></script>
+</body>
+</html>

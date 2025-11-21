@@ -1,0 +1,583 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 260px;
+    background-color: #2b2d42;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav a i {
+    margin-right: 10px;
+  }
+  
+  .nav a.active,
+  .nav a:hover {
+    background-color: #00bcd4;
+  }
+  
+  .calendar-box {
+    background-color: #3a3d5a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 1.8rem;
+    color: #2b2d42;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logout {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ef5350;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .send-btn {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .send-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  .history h2 {
+    margin-bottom: 15px;
+    color: #2b2d42;
+  }
+  
+  #message-history {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #message-history li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .main {
+      padding: 15px;
+    }
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+    color: white;
+    font-size: 0.85rem;
+  }
+  
+  .calendar-grid .day,
+  .calendar-grid .date {
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 5px;
+  }
+  
+  .calendar-grid .day {
+    font-weight: bold;
+    background-color: #394867;
+  }
+  
+  .calendar-grid .date {
+    background-color: #4b4e6d;
+  }
+  
+  .calendar-grid .today {
+    background-color: #00bcd4;
+    font-weight: bold;
+  }
+  
+  .calendar-messages {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eceff1;
+    color: #333;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    min-height: 40px;
+  }
+  
+  .calendar-messages h4 {
+    margin: 0 0 8px;
+    color: #2b2d42;
+    font-size: 1rem;
+  }
+
+  .add-event {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+  }
+  
+  #event-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  #event-form input,
+  #event-form button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+  }
+  
+  #event-form input[type="text"] {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  #event-form button {
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+  
+  #event-form button:hover {
+    background-color: #004d40;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .month-nav {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #333;
+  }
+  
+  .month-nav:hover {
+    color: #4CAF50;
+  }
+  
+  .calendar-title {
+    margin: 0 15px;
+    font-size: 1.2em;
+  }
+  
+  .calendar-grid-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .delete-event {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0 5px;
+  }
+  
+  .delete-event:hover {
+    color: #cc0000;
+  }
+  
+  #events-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .clock {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  :root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --warning-color: #f72585;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header h1 {
+    color: var(--dark-color);
+    font-size: 1.8rem;
+  }
+  
+  .user-info {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+  }
+  
+  .content {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+  }
+  
+  .message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-control {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .send-button {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .send-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-options {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #eee;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  #message-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .message {
+    padding: 1.2rem;
+    border-radius: var(--border-radius);
+    position: relative;
+  }
+  
+  .message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+  
+  .message.received {
+    background-color: #f0f4ff;
+  }
+  
+  .message.received::before {
+    background-color: var(--primary-color);
+  }
+  
+  .message.sent {
+    background-color: #e8f4fd;
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .message.sent::before {
+    background-color: var(--success-color);
+  }
+  
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .sender {
+    font-weight: 600;
+  }
+  
+  .time {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .message-content {
+    line-height: 1.5;
+  }
+  
+  /* Animation pour les nouveaux messages */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .message.new {
+    animation: fadeIn 0.5s ease-out;
+  }
+  .message-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plan-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .plan-button:hover {
+    background-color: #0056b3;
+  }
+  /* Ajouts pour les notifications */
+.message.empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Animation pour les nouvelles notifications */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message.new {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Style pour l'horloge */
+.clock {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.message.empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.seance-details {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #d32f2f;
+}
+
+.seance-details strong {
+  color: #d32f2f;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.seance-details div {
+  margin: 5px 0;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.seance-details i {
+  width: 16px;
+  text-align: center;
+  color: #4361ee;
+}
+  
